@@ -1,10 +1,12 @@
 import Express from "express";
 import { pool } from "./db.js ";
 import  EmpleadoRouter  from "./Routes/Empleado.routes.js";
+import cors from "cors"
 
 const app = Express();
 
 app.use(Express.json());
+app.use(cors())
 app.use(EmpleadoRouter)
 
 
